@@ -4,8 +4,13 @@
 rsync -rtv /vagrant/etcfiles/ /etc
 rsync -rtv /vagrant/binfiles/ /usr/local/bin
 
-# Get all necessary packages
+# Add virtualbox PPA so we can upgrade guest additions to 4.2
+# This will also get any security updates not in the base image
+add-apt-repository -y ppa:debfx/virtualbox
 sudo apt-get update
+sudo apt-get -y upgrade
+
+# Other packages we need
 sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev build-essential
 
 # Ruby
