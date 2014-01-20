@@ -1,0 +1,17 @@
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+
+
+Welcome to the Railsbridge Boston virtual machine!  The RailsBridge VM is a "computer within your computer" 
+running the Linux operating system.  Everything you need for the Suggestotron tutorial is installed, including:
+Ruby 2.0, Rails 4.0, sqlite3, the heroku toolbelt, and git.
+
+When you start your Rails app, visit http://localhost:3000 in your web browser.
+
+The ~/workspace directory is shared with the folder on your laptop where you created this VM.  Any file you 
+put there in your laptop will appear here in ~/workspace.  This lets you edit files with an OSX or Windows
+text editor, and run them here in the VM.
+
+To leave the virtual machine, type
+    exit
+and hit return. 
+
