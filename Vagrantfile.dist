@@ -1,0 +1,9 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Don't provision using this file; it's only for packaging with the image.
+
+Vagrant.configure('2') do |config|
+  config.vm.box = "railsbridgebox"
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
+end
