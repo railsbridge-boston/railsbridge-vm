@@ -1,0 +1,26 @@
+#!/usr/bin/ruby
+
+require 'readline'
+
+# Git calls as as an 'editor', so just one argument.
+commit_msg_file = ARGV.shift
+
+puts <<EOF
+# Please enter a one-line summary of the change you are committing.
+# This is called the "commit message".
+# You can skip this prompt by adding the -m option, like this:
+#     git commit -m "commit message here"
+EOF
+
+msg = Readline.readline("message> ", true)
+
+if msg
+  File.open(commit_msg_file, 'w') do |msg_file|
+    msg_file.puts msg
+  end
+else
+  # ctrl-D to drop into real editor. Our VM has nano installed. Don't
+  # use `sensible-editor` because the prompt is super confusing.
+  editor = ENV['EDITOR'] || 'nano'
+  exec editor, *ARGV
+end
