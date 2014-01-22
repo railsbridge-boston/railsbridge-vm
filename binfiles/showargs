@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+puts "program name (aka argument 0): #{$0.inspect}"
+ARGV.each_with_index do |arg, i|
+  puts "argument #{i+1}: #{arg.inspect}#{' (option)' if arg.start_with?('-')}"
+end
