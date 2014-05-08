@@ -9,7 +9,7 @@ sudo apt-get update
 sudo apt-get -y upgrade
 
 # Other packages we need
-sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev build-essential
+sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
 
 # Ruby (our fork of chruby will not automatically build all rubies)
 cd /tmp
