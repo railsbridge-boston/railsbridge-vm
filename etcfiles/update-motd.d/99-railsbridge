@@ -1,5 +1,6 @@
-Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+#!/bin/sh
 
+cat <<EOF
 Welcome to the Railsbridge Boston virtual machine! The RailsBridge VM is a
 "computer within your computer" running the Linux operating system. Everything
 you need for the Suggestotron tutorial is installed, including: Ruby 2.0,
@@ -17,3 +18,5 @@ To leave the virtual machine, type
     exit
 
 and hit return.
+
+EOF
