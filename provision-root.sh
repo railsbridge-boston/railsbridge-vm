@@ -4,9 +4,7 @@
 rsync -rtv /vagrant/etcfiles/ /etc
 rsync -rtv /vagrant/binfiles/ /usr/local/bin
 
-# Add virtualbox PPA so we can upgrade guest additions to 4.2
-# This will also get any security updates not in the base image
-add-apt-repository -y ppa:debfx/virtualbox
+# Get any security updates not in the base image
 sudo apt-get update
 sudo apt-get -y upgrade
 
