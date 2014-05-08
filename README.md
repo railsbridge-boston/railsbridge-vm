@@ -6,7 +6,7 @@ To instructors and TAs: if you're interested in helping to maintain the VM, keep
 
 ## Setup of the generated VM
 
-The base box is Ubuntu 12.04 LTS. The VirtualBox guest additions are updated from the `debfx/virtualbox` PPA (currently version 4.2); we should ask students to install the same version of the VirtualBox host.
+The base box is Ubuntu 14.04 LTS; Ubuntu distributes version 4.3 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
 
 The target Ruby version is 2.0, and Rails version is 4.0. We may need to explicitly specify these in the future.
 
