@@ -17,7 +17,7 @@ sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
 cd /tmp
 curl -L https://github.com/railsbridge-boston/chruby/archive/v0.3.8.rbb201405.3.tar.gz | tar xzv
 (cd chruby-0.3.8.rbb201405.3 && ./scripts/setup.sh)
-ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION"
+ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
 
 # Heroku Toolbelt is a .deb package, so install as root.
 curl -L https://toolbelt.heroku.com/install-ubuntu.sh | sh
