@@ -2,13 +2,17 @@
 
 RAILSBRIDGE_RUBY_VERSION='2.0'
 
-# Before doing anything else, copy our files into place.
-rsync -rtv /vagrant/etcfiles/ /etc
-rsync -rtv /vagrant/binfiles/ /usr/local/bin
+# Ubuntu images now include things we don't want
+apt-get -y remove --purge chef chef-zero puppet puppet-common landscape-client landscape-common
+apt-get -y autoremove
 
 # Get any security updates not in the base image
 sudo apt-get update
 sudo apt-get -y upgrade
+
+# Before doing anything else, copy our files into place.
+rsync -rtv /vagrant/etcfiles/ /etc
+rsync -rtv /vagrant/binfiles/ /usr/local/bin
 
 # Other packages we need
 sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
