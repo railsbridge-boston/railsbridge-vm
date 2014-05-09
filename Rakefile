@@ -5,6 +5,6 @@ end
 
 desc "Build image file from VM"
 task :package => :up do
-  tag = `git describe --tags HEAD`.chomp
+  tag = `git describe --tags --always HEAD`.chomp
   sh 'vagrant', 'package', '--vagrantfile', 'Vagrantfile.dist', '--output', "railsbridgevm-#{tag}.box"
 end
