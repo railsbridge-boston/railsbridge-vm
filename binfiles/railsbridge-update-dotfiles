@@ -1,0 +1,7 @@
+#!/bin/sh
+
+base_url='https://github.com/railsbridge-boston/railsbridge-boston-vm/raw/master/dotfiles'
+
+for dotfile in .bash_logout .bash_profile .bashrc .gemrc .gitconfig .irbrc .profile; do
+    curl -L "$base_url/$dotfile" -o "$HOME/$dotfile"
+end
