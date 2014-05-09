@@ -1,4 +1,4 @@
-# RailsBridge Boston Virtual Machine
+# RailsBridge Virtual Machine
 
 To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Boston site](http://www.railsbridgeboston.org/vm_setup) to set up your virtual machine.
 
@@ -14,7 +14,7 @@ We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profil
 
 ## Building a fresh image
 
-The Vagrantfile will allow you to rebuild the RailsBridge Boston VM from scratch. Run:
+The Vagrantfile will allow you to rebuild the RailsBridge VM from scratch. Run:
 
     rake up
 

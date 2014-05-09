@@ -1,4 +1,4 @@
-# RailsBridge Boston VM provision script (user part)
+# RailsBridge VM provision script (user part)
 
 RAILSBRIDGE_RAILS_VERSION='4.0.5'
 

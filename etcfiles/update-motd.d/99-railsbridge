@@ -1,10 +1,10 @@
 #!/bin/sh
 
 cat <<EOF
-Welcome to the Railsbridge Boston virtual machine! The RailsBridge VM is a
-"computer within your computer" running the Linux operating system. Everything
-you need for the Suggestotron tutorial is installed, including: Ruby 2.0,
-Rails 4.0, sqlite3, the heroku toolbelt, and git.
+Welcome to the Railsbridge virtual machine! The RailsBridge VM is a "computer
+within your computer" running the Linux operating system. Everything you need
+for the Suggestotron tutorial is installed, including: Ruby 2.0, Rails 4.0,
+sqlite3, the heroku toolbelt, and git.
 
 When you start your Rails app, visit http://localhost:3000 in your web browser.
 

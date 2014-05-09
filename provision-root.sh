@@ -1,4 +1,4 @@
-# RailsBridge Boston VM provision script
+# RailsBridge VM provision script
 
 RAILSBRIDGE_RUBY_VERSION='2.0'
 
