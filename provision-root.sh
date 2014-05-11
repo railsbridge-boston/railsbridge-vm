@@ -9,11 +9,6 @@ apt-get -y autoremove
 # Get any security updates not in the base image
 sudo apt-get update
 sudo apt-get -y upgrade
-
-# Before doing anything else, copy our files into place.
-rsync -rtv /vagrant/etcfiles/ /etc
-rsync -rtv /vagrant/binfiles/ /usr/local/bin
-
 # Other packages we need
 sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
 
@@ -25,6 +20,12 @@ ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
 
 # Heroku Toolbelt is a .deb package, so install as root.
 curl -L https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+# Copy our files into place
+rsync -rtv /vagrant/etcfiles/ /etc
+rsync -rtv /vagrant/binfiles/ /usr/local/bin
+# Force MOTD generation (will only work on 14.04)
+run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 
 # Clean up APT cache and zero out disk to reduce image size
 apt-get clean
