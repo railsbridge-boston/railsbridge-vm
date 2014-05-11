@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cat <<EOF
+You are currently in the RailsBridge virtual machine. To run a 'vagrant'
+command, first type
+
+    exit
+
+and press return. This will get you back to your computer's command line.
+EOF
