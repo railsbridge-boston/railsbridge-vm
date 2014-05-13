@@ -1,4 +1,10 @@
 require 'irb/completion'
+require 'irb/ext/history'
+
+# Save history (will be shared between `irb` and `rails console`)
+
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 # Apply ANSI color escapes to the main part of the prompt (so that
 # students know they're in IRB), but reset back to normal before the
