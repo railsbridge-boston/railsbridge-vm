@@ -14,8 +14,7 @@ set -v
 rsync -rtv /vagrant/dotfiles/ /home/vagrant
 
 # Our bash setup will cd to workspace on login.
-cd /home/vagrant
-ln -s /vagrant workspace
+ln -s /vagrant $HOME/workspace
 
 # Install gems
 gem install rails --version "$RAILSBRIDGE_RAILS_VERSION"
