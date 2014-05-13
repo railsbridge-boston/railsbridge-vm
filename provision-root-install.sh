@@ -28,11 +28,3 @@ cd /tmp
 curl -s -L "https://github.com/railsbridge-boston/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
 (cd "chruby-$RAILSBRIDGE_CHRUBY_VERSION" && ./scripts/setup.sh)
 ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
-
-# Install Heroku Toolbelt (this adds an apt source, so must run as root)
-curl -s -L https://toolbelt.heroku.com/install-ubuntu.sh | sh
-
-# Clean up APT cache and zero out disk to reduce image size
-apt-get clean
-dd if=/dev/zero of=/EMPTY bs=1M
-rm /EMPTY

@@ -30,10 +30,13 @@ When you are ready to make the "gold master" version that we will ask students t
 
 ## What to edit in this repo
 
-To keep things simple and easy for everyone to modify, we use a shell script provisioner. There are two scripts:
+To keep things simple and easy for everyone to modify, we use a shell script provisioner. There are three scripts:
 
-* `provision-root.sh` runs as root (installs packages/Ruby system-wide)
-* `provision-user.sh` runs as the `vagrant` user (installs gems to home directory)
+* `provision-root-install.sh` runs as root (installs packages/Ruby system-wide)
+* `provision-user-install.sh` runs as the `vagrant` user (installs gems to home directory)
+* `provision-root-cleanup.sh` runs as root (removes files and zeroes out disk)
+
+We also run the Heroku Toolbelt install script directly as root.
 
 Files are copied into the VM from these directories:
 
