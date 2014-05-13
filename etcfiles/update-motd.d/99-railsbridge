@@ -19,6 +19,5 @@ To leave the virtual machine, type
     exit
 
 and hit return.
-
 EOF
 tput sgr0
