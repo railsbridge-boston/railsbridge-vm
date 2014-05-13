@@ -25,12 +25,12 @@ run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 
 # Build/install Ruby (our fork of chruby will not automatically build all rubies)
 cd /tmp
-curl -L "https://github.com/railsbridge-boston/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
+curl -s -L "https://github.com/railsbridge-boston/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
 (cd "chruby-$RAILSBRIDGE_CHRUBY_VERSION" && ./scripts/setup.sh)
 ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
 
 # Install Heroku Toolbelt (this adds an apt source, so must run as root)
-curl -L https://toolbelt.heroku.com/install-ubuntu.sh | sh
+curl -s -L https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 # Clean up APT cache and zero out disk to reduce image size
 apt-get clean
