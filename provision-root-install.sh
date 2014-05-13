@@ -23,6 +23,9 @@ rsync -rtv /tmp/provision-files/usr/local/bin/ /usr/local/bin/
 rm -f /etc/update-motd.d/51-cloudguest
 run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 
+# FIXME: Work around Vagrant 1.6.1 output, needs additional cleanup
+echo "progress = dot:giga" > $HOME/.wgetrc
+
 # Do all source installation from this dir, which we'll clean up in another script
 mkdir -p /usr/local/src && cd /usr/local/src
 # Install chruby
