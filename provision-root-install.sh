@@ -21,6 +21,7 @@ sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
 rsync -rtv /vagrant/etcfiles/ /etc
 rsync -rtv /vagrant/binfiles/ /usr/local/bin
 # Force MOTD generation (will only work on 14.04)
+rm -f /etc/update-motd.d/51-cloudguest
 run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 
 # Build/install Ruby (our fork of chruby will not automatically build all rubies)
