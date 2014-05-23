@@ -10,7 +10,7 @@ To instructors and TAs: if you're interested in helping to maintain the VM, keep
 
 The base box is Ubuntu 14.04 LTS; Ubuntu distributes version 4.3 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
 
-The target Ruby version is 2.0 (latest), and Rails version is 4.0.5. These are set in the provisioning scripts.
+The target Ruby version is 2.0 (latest), and Rails version is 4.0.5. These are set in the `versions.sh`, which is used by the provisioning scripts.
 
 We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profile` to set their `PATH`. It provides a version of `gem` that defaults to user installs.
 

@@ -1,8 +1,5 @@
 # RailsBridge VM provision script
-
-# Set versions here
-RAILSBRIDGE_RUBY_VERSION='2.0'
-RAILSBRIDGE_CHRUBY_VERSION='0.3.8.rbb201405.4'
+. /tmp/railsbridge-versions.sh
 
 # Tell the shell to print commands before running them
 set -v

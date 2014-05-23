@@ -1,17 +1,16 @@
 # RailsBridge VM provision script (user part)
-
-# Set versions here
-RAILSBRIDGE_RAILS_VERSION='4.0.5'
+. /tmp/railsbridge-versions.sh
 
 # Put the right `gem` in our PATH (do this before turning on -v)
 . /usr/local/share/chruby/chruby.sh
-chruby ruby-2.0
+chruby "ruby-$RAILSBRIDGE_RUBY_VERSION"
 
 # Tell the shell to print commands before running them
 set -v
 
 # Copy files that should be owned by the user account
 rsync -rtv /vagrant/dotfiles/ /home/vagrant
+echo "chruby ruby-$RAILSBRIDGE_RUBY_VERSION" >> /home/vagrant/.bash_profile
 
 # Our bash setup will cd to workspace on login.
 ln -s /vagrant $HOME/workspace
