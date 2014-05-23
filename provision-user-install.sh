@@ -17,7 +17,3 @@ ln -s /vagrant $HOME/workspace
 
 # Install gems
 gem install rails --version "$RAILSBRIDGE_RAILS_VERSION"
-# TODO: decide if this is still needed; we did not use it May
-gem install therubyracer
-# Keep this until the curriculum is updated to no longer use attr_accessible
-gem install protected_attributes
