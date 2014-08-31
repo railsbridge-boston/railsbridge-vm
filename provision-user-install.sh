@@ -19,3 +19,8 @@ ln -s /vagrant $HOME/workspace
 gem install rails --version "$RAILSBRIDGE_RAILS_VERSION"
 # Keep this until the curriculum is updated to no longer use attr_accessible
 gem install protected_attributes
+
+# Create a new app in order to prefetch default gems for `bundle install`
+cd /tmp
+rails new testapp
+rm -rf testapp
