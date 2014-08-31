@@ -21,8 +21,13 @@ rsync -rtv /vagrant/binfiles/ /usr/local/bin
 rm -f /etc/update-motd.d/51-cloudguest
 run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 
-# Build/install Ruby (our fork of chruby will not automatically build all rubies)
-cd /usr/local/src
+# Do all source installation from this dir, which we'll clean up in another script
+mkdir -p /usr/local/src && cd /usr/local/src
+# Install chruby
 curl -s -L "https://github.com/railsbridge-boston/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
 (cd "chruby-$RAILSBRIDGE_CHRUBY_VERSION" && ./scripts/setup.sh)
+# Install ruby-install
+curl -s -L "https://github.com/railsbridge-boston/ruby-install/archive/v$RAILSBRIDGE_RUBY_INSTALL_VERSION.tar.gz" | tar xzv
+(cd "ruby-install-$RAILSBRIDGE_RUBY_INSTALL_VERSION" && make install)
+# Build Ruby
 ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
