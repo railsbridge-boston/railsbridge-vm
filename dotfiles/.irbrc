@@ -23,4 +23,6 @@ IRB.conf[:PROMPT][:RAILSBRIDGE] = {
   :RETURN   => _IRB_classic_return_bold_cyan
 }
 
-IRB.conf[:PROMPT_MODE] = :RAILSBRIDGE
+if File.exist?("#{ENV['HOME']}/.railsbridge_color")
+  IRB.conf[:PROMPT_MODE] = :RAILSBRIDGE
+end

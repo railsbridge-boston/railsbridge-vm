@@ -1,0 +1,6 @@
+#!/bin/sh
+
+case "$1" in
+    enable|yes|on) touch "$HOME/.railsbridge_color";;
+    disable|no|off) rm -f "$HOME/.railsbridge_color";;
+esac
