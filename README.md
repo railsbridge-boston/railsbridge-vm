@@ -2,7 +2,7 @@
 
 If you just want the VM image, **downloads are here**: http://downloads.railsbridge.org/
 
-To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Boston site](http://www.railsbridgeboston.org/installfest/vm_setup) to set up your virtual machine.
+To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Boston site](http://docs.railsbridgeboston.org/installfest/) to set up your virtual machine.
 
 To instructors and TAs: if you're interested in helping to maintain the VM, keep reading.
 
