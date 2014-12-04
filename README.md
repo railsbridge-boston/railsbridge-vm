@@ -22,7 +22,11 @@ The Vagrantfile will allow you to rebuild the RailsBridge VM from scratch. Run:
 
     rake up
 
-This just runs `vagrant up`. The base box will be downloaded directly from Ubuntu if it hasn't already been added. Building Ruby takes a while, so get some coffee.
+This just runs `vagrant up`. Don't worry about the red text - unless the process
+crashes, it's going fine. The base box will be downloaded directly from Ubuntu
+if it hasn't already been added.
+
+Building Ruby takes a while, so get some coffee.
 
 Then, to create an image file to distribute:
 
