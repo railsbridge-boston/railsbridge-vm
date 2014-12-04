@@ -48,6 +48,11 @@ Files are copied into the VM from these directories:
 * `etcfiles` to `/etc` (as root)
 * `dotfiles` to `/home/vagrant` (as the user)
 
+To apply your changes to the local Vagrant box that you booted with `vagrant
+up`, run `vagrant destroy` and then `vagrant up` again.
+
+It will re-run everything again, so grab some more coffee.
+
 ## Tests
 
 TODO: There should be some kind of automated test for the output (i.e. can you start the VM, log in, clone a test Rails app, and run it).
