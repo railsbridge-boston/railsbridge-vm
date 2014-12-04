@@ -24,10 +24,10 @@ run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
 # Do all source installation from this dir, which we'll clean up in another script
 mkdir -p /usr/local/src && cd /usr/local/src
 # Install chruby
-curl -s -L "https://github.com/railsbridge-boston/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
+curl -s -L "https://github.com/postmodern/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
 (cd "chruby-$RAILSBRIDGE_CHRUBY_VERSION" && ./scripts/setup.sh)
 # Install ruby-install
-curl -s -L "https://github.com/railsbridge-boston/ruby-install/archive/v$RAILSBRIDGE_RUBY_INSTALL_VERSION.tar.gz" | tar xzv
+curl -s -L "https://github.com/postmodern/ruby-install/archive/v$RAILSBRIDGE_RUBY_INSTALL_VERSION.tar.gz" | tar xzv
 (cd "ruby-install-$RAILSBRIDGE_RUBY_INSTALL_VERSION" && make install)
 # Build Ruby
 ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
