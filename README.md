@@ -22,9 +22,7 @@ The Vagrantfile will allow you to rebuild the RailsBridge VM from scratch. Run:
 
     rake up
 
-This just runs `vagrant up`. Don't worry about the red text - unless the process
-crashes, it's going fine. The base box will be downloaded directly from Ubuntu
-if it hasn't already been added.
+This just runs `vagrant up`. Don't worry about the red text - it's just STDERR output. The base box will be downloaded directly from Ubuntu if it hasn't already been added.
 
 Building Ruby takes a while, so get some coffee.
 
@@ -52,8 +50,7 @@ Files are copied into the VM from these directories:
 * `etcfiles` to `/etc` (as root)
 * `dotfiles` to `/home/vagrant` (as the user)
 
-To apply your changes to the local Vagrant box that you booted with `vagrant
-up`, run `vagrant destroy` and then `vagrant up` again.
+To apply your changes to the local Vagrant box that you booted with `vagrant up`, run `vagrant destroy` and then `vagrant up` again.
 
 It will re-run everything again, so grab some more coffee.
 
