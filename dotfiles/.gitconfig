@@ -1,2 +1,4 @@
 [core]
 	editor = edit-commit-message
+[sequence]
+	editor = nano
