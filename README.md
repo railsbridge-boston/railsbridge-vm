@@ -2,7 +2,7 @@
 
 If you just want the VM image, **downloads are here**: http://downloads.railsbridge.org/
 
-To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Boston site](http://www.railsbridgeboston.org/installfest/vm_setup) to set up your virtual machine.
+To workshop participants: this is the "behind the scenes" stuff that instructors use to create the virtual machine that you will use. You should install the virtual machine image file, not this code. Please follow [the instructions on the RailsBridge Boston site](http://docs.railsbridgeboston.org/installfest/) to set up your virtual machine.
 
 To instructors and TAs: if you're interested in helping to maintain the VM, keep reading.
 
@@ -20,9 +20,11 @@ We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profil
 
 The Vagrantfile will allow you to rebuild the RailsBridge VM from scratch. Run:
 
-    rake up
+    vagrant up
 
-This just runs `vagrant up`. The base box will be downloaded directly from Ubuntu if it hasn't already been added. Building Ruby takes a while, so get some coffee.
+Don't worry about the red text (Vagrant automatically colors all text printed to standard error). The base box will be downloaded directly from Ubuntu if it hasn't already been added.
+
+Building Ruby takes a while, so get some coffee.
 
 Then, to create an image file to distribute:
 
@@ -47,6 +49,12 @@ Files are copied into the VM from these directories:
 * `binfiles` to `/usr/local/bin` (as root)
 * `etcfiles` to `/etc` (as root)
 * `dotfiles` to `/home/vagrant` (as the user)
+
+## Rebuilding changes
+
+If you make changes to the provisioning scripts, you should rebuild the VM from a clean image to ensure that everything is reproducible and that no manual changes have snuck in. To do this, run `vagrant destroy` and then `vagrant up` again.
+
+It will re-run everything again, so grab some more coffee.
 
 ## Tests
 
