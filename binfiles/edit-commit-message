@@ -2,7 +2,7 @@
 
 require 'readline'
 
-# Git calls as as an 'editor', so just one argument.
+# Git calls us like a text editor, so just one argument.
 commit_msg_file = ARGV.shift
 
 puts <<EOF
