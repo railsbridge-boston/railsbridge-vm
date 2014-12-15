@@ -56,6 +56,15 @@ If you make changes to the provisioning scripts, you should rebuild the VM from 
 
 It will re-run everything again, so grab some more coffee.
 
+## Using the VM
+
+There are a few extra scripts in the VM that you can use during the workshop:
+
+* `railsbridge-update-dotfiles` will download and re-install all dotfiles from this repo (useful if they are mistakenly edited or deleted).
+* `railsbridge-color off` will disable coloring of shell and IRB prompts (log out and back in to see the change). To re-enable color, run `railsbridge-color on`.
+* `showargs` can be used to explain how command-line arguments work.
+* `vagrant` prints a message explaining that you're in the VM and should exit if you want to run a Vagrant command.
+
 ## Tests
 
 TODO: There should be some kind of automated test for the output (i.e. can you start the VM, log in, clone a test Rails app, and run it).
