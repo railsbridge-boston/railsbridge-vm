@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for url; do
+    echo "Copy and paste this URL into your web browser: $url"
+done

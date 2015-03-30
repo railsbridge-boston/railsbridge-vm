@@ -118,6 +118,9 @@ fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### Use this script (echos back URLs) in case students try to run "heroku open"
+export BROWSER=no-browser
+
 ### cd to workspace - students forget this, and don't see their files
 echo "Changing directory to the shared ~/workspace folder for your convenience."
 cd ~/workspace
