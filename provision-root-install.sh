@@ -27,7 +27,7 @@ mkdir -p /usr/local/src && cd /usr/local/src
 curl -s -L "https://github.com/postmodern/chruby/archive/v$RAILSBRIDGE_CHRUBY_VERSION.tar.gz" | tar xzv
 (cd "chruby-$RAILSBRIDGE_CHRUBY_VERSION" && ./scripts/setup.sh)
 # Install ruby-install
-curl -s -L "https://github.com/postmodern/ruby-install/archive/$RAILSBRIDGE_RUBY_INSTALL_REVISION.tar.gz" | tar xzv
-(cd "ruby-install-$RAILSBRIDGE_RUBY_INSTALL_REVISION" && make install)
+curl -s -L "https://github.com/postmodern/ruby-install/archive/v$RAILSBRIDGE_RUBY_INSTALL_VERSION.tar.gz" | tar xzv
+(cd "ruby-install-$RAILSBRIDGE_RUBY_INSTALL_VERSION" && make install)
 # Build Ruby
 ruby-install ruby "$RAILSBRIDGE_RUBY_VERSION" -- --disable-install-rdoc
