@@ -7,7 +7,13 @@ within your computer" running the Linux operating system. Everything you need
 for the Suggestotron tutorial is installed, including: Ruby 2.0, Rails 4.0,
 sqlite3, the heroku toolbelt, and git.
 
-When you start your Rails app, visit http://localhost:3000 in your web browser.
+To start your rails server, type
+
+rails server -b 0.0.0.0
+
+and hit return.
+
+After you start your Rails server, visit http://localhost:3000 in your web browser.
 
 The ~/workspace directory is shared with the folder on your laptop where you
 created this VM. Any file you put there in your laptop will appear here in
