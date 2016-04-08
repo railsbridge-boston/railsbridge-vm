@@ -10,7 +10,7 @@ To instructors and TAs: if you're interested in helping to maintain the VM, keep
 
 The base box is Ubuntu 14.04 LTS; Ubuntu distributes version 4.3 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
 
-The target versions are Ruby 2.0 and Rails 4.0 (the latest patchlevels available at build time). These are set in the `versions.sh`, which is used by the provisioning scripts.
+The target versions are Ruby 2.0 and Rails 4.0 (the latest patchlevels available at build time). These are set in `provision-files/versions.sh`, which is used by the provisioning scripts.
 
 If you want to run a workshop with Rails 3, there is a `rails3` branch (Ruby 1.9.3, Rails 3.2). It may be less up to date so check if there have been any security updates to Rails 3 before building it.
 
@@ -44,11 +44,7 @@ To keep things simple and easy for everyone to modify, we use a shell script pro
 
 We also run the Heroku Toolbelt install script directly as root.
 
-Files are copied into the VM from these directories:
-
-* `binfiles` to `/usr/local/bin` (as root)
-* `etcfiles` to `/etc` (as root)
-* `dotfiles` to `/home/vagrant` (as the user)
+Files are copied into the VM from the `provision-files` directory (`/usr/local/bin` and `/etc` as root, `/home/vagrant` as the user account).
 
 ## Rebuilding changes
 

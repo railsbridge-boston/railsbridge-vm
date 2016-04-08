@@ -3,6 +3,9 @@
 # Tell the shell to print commands before running them
 set -v
 
+# Remove provision files
+rm -rf /tmp/provision-files
+
 # Remove downloaded Ruby source
 rm -rf /usr/local/src/ruby-*
 rm -rf /usr/local/src/chruby-*

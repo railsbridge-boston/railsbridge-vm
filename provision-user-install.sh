@@ -1,5 +1,5 @@
 # RailsBridge VM provision script (user part)
-. /tmp/railsbridge-versions.sh
+. /tmp/provision-files/versions.sh
 
 # Put the right `gem` in our PATH (do this before turning on -v)
 . /usr/local/share/chruby/chruby.sh
@@ -9,7 +9,7 @@ chruby "ruby-$RAILSBRIDGE_RUBY_VERSION"
 set -v
 
 # Copy files that should be owned by the user account
-rsync -rtv /vagrant/dotfiles/ /home/vagrant
+rsync -rtv /tmp/provision-files/home/vagrant/ /home/vagrant/
 echo "chruby ruby-$RAILSBRIDGE_RUBY_VERSION" >> /home/vagrant/.bash_profile
 
 # Our bash setup will cd to workspace on login.

@@ -1,5 +1,5 @@
 # RailsBridge VM provision script
-. /tmp/railsbridge-versions.sh
+. /tmp/provision-files/versions.sh
 
 # Tell the shell to print commands before running them
 set -v
@@ -17,8 +17,8 @@ sudo apt-get -y upgrade
 sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
 
 # Copy our files into place
-rsync -rtv /vagrant/etcfiles/ /etc
-rsync -rtv /vagrant/binfiles/ /usr/local/bin
+rsync -rtv /tmp/provision-files/etc/ /etc/
+rsync -rtv /tmp/provision-files/usr/local/bin/ /usr/local/bin/
 # Force MOTD generation (will only work on 14.04)
 rm -f /etc/update-motd.d/51-cloudguest
 run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
