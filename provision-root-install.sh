@@ -5,7 +5,7 @@
 set -v
 
 # Remove configuration-management systems preinstalled in official Ubuntu images
-apt-get -y remove --purge chef chef-zero puppet puppet-common landscape-client landscape-common
+apt-get -y remove --purge chef chef-zero puppet puppet-common juju landscape-client landscape-common
 # And any dependencies
 apt-get -y autoremove
 # Get any security updates not in the base image
