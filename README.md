@@ -18,19 +18,25 @@ We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profil
 
 ## Building a fresh image
 
-The Vagrantfile will allow you to rebuild the RailsBridge VM from scratch. Run:
+There are a few simple Rake tasks to help you rebuild the image from scratch. Run:
 
-    vagrant up
+    rake up
 
-Don't worry about the red text (Vagrant automatically colors all text printed to standard error). The base box will be downloaded directly from Ubuntu if it hasn't already been added.
+This will update the base box if you've downloaded it previously, then run `vagrant up` to provision the VM. (If you haven't downloaded the base box, Vagrant will fetch it automatically.)
 
-Building Ruby takes a while, so get some coffee.
+Don't worry about the red text (Vagrant automatically colors all text printed to standard error). Building Ruby takes a while, so get some coffee.
 
-Then, to create an image file to distribute:
+When the provision finishes, run this to create an image file to distribute:
 
     rake package
 
-This will create an image file name `railsbridgevm-version.box`, where the `version` is based on the tag you have checked out.
+This will output an image file name `railsbridgevm-version.box`, where the `version` is based on the tag you have checked out.
+
+Finally, when you're ready to make a change and build again, run:
+
+    rake cleanup
+
+To halt and destroy the VM, so that the next `vagrant up` run has to re-provision it.
 
 When you are ready to make the "gold master" version that we will ask students to download, create (and push to GitHub) a tag with the year and month of the workshop (e.g. `2014-01`) before running `rake package`. During the process of testing an image, you can run `rake package` with an untagged commit; the version will then include its SHA and how many commits it is ahead of the last tag.
 
