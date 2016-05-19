@@ -12,9 +12,6 @@ set -v
 rsync -rtv /tmp/provision-files/home/vagrant/ /home/vagrant/
 echo "chruby ruby-$RAILSBRIDGE_RUBY_VERSION" >> /home/vagrant/.bash_profile
 
-# Our bash setup will cd to workspace on login.
-ln -s /vagrant $HOME/workspace
-
 # Install gems
 gem install rails --version "$RAILSBRIDGE_RAILS_VERSION"
 
