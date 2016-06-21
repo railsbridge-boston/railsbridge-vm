@@ -2,8 +2,10 @@
 # vi: set ft=ruby :
 
 # Don't provision using this file; it's only for packaging with the image.
+# It would be nice if this could set config.vm.box_version but we don't get
+# to have versioning since we're distributing this as a file.
 
 Vagrant.configure('2') do |config|
-  config.vm.box = "railsbridgebox"
+  config.vm.box = "railsbridge"
   config.vm.network :forwarded_port, guest: 3000, host: 3000
 end
