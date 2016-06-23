@@ -14,9 +14,9 @@ and hit return.
 
 After you start your Rails server, visit http://localhost:3000 in your web browser.
 
-The ~/workspace directory is shared with the folder on your laptop where you
+The /vagrant directory is shared with the folder on your laptop where you
 created this VM. Any file you put there in your laptop will appear here in
-~/workspace. This lets you edit files with an OSX or Windows text editor, and
+/vagrant. This lets you edit files with an OSX or Windows text editor, and
 run them here in the VM.
 
 To leave the virtual machine, type
