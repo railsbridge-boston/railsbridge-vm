@@ -6,8 +6,11 @@ end
 
 desc "Build image file from VM"
 task :package do
+  require 'digest/sha2'
   tag = `git describe --tags --always HEAD`.chomp
-  sh 'vagrant', 'package', '--vagrantfile', 'Vagrantfile.dist', '--output', "railsbridgevm-#{tag}.box"
+  box = "railsbridgevm-#{tag}.box"
+  sh 'vagrant', 'package', '--vagrantfile', 'Vagrantfile.dist', '--output', box
+  puts "SHA256 (#{box}) = #{Digest::SHA256.hexdigest(File.read(box))}"
 end
 
 desc "Destroy VM"
