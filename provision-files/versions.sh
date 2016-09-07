@@ -1,6 +1,6 @@
 # Change these whenever the curriculum is updated.
-RAILSBRIDGE_RUBY_VERSION='2.2.5'
-RAILSBRIDGE_RAILS_VERSION='4.2.6'
+RAILSBRIDGE_RUBY_VERSION='2.3.1'
+RAILSBRIDGE_RAILS_VERSION='4.2.7.1'
 
 # We use ruby-install to build Ruby. Before building the VM image, check
 # https://github.com/postmodern/ruby-install/commits/master to see if
