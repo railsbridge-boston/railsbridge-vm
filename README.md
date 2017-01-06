@@ -8,7 +8,7 @@ To instructors and TAs: if you're interested in helping to maintain the VM, keep
 
 ## Setup of the generated VM
 
-The base box is Ubuntu 14.04 LTS; Ubuntu distributes version 4.3 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
+The base box is Ubuntu 16.04 LTS; Ubuntu distributes version 5.0 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
 
 The target versions are Ruby 2.2 and Rails 4.2 (the latest patchlevels available at build time). These are set in `provision-files/versions.sh`, which is used by the provisioning scripts.
 
