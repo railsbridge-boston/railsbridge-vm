@@ -67,6 +67,12 @@ There are a few extra scripts in the VM that you can use during the workshop:
 * `showargs` can be used to explain how command-line arguments work.
 * `vagrant` prints a message explaining that you're in the VM and should exit if you want to run a Vagrant command.
 
+## Additional Files
+
+Some files are not installed in the VM:
+
+* `vm.rb`: this is a Rails application template that students can apply to their app so that they don't have to pass `-b 0.0.0.0` to `rails server`. Copy it to the downloads site alongside the VM images, and have students apply it with `rake rails:template LOCATION=http://downloads.railsbridge.org/vm.rb`.
+
 ## Tests
 
 TODO: There should be some kind of automated test for the output (i.e. can you start the VM, log in, clone a test Rails app, and run it).
