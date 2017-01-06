@@ -5,15 +5,15 @@
 set -v
 
 # Remove Ubuntu stuff we don't want
-sudo apt-get -y remove --purge snapd ubuntu-core-launcher ubuntu-release-upgrader-core
+apt-get -y remove --purge snapd ubuntu-core-launcher ubuntu-release-upgrader-core
 # Clean up dependencies of those
-sudo apt-get -y autoremove
+apt-get -y autoremove
 
 # Get any security updates not in the base image
-sudo apt-get update
-sudo apt-get -y upgrade
+apt-get update
+apt-get -y upgrade
 # Other packages we need
-sudo apt-get install -q -y make nodejs sqlite3 libsqlite3-dev
+apt-get install -q -y make nodejs sqlite3 libsqlite3-dev
 
 # Copy our files into place
 rsync -rtv /tmp/provision-files/etc/ /etc/
