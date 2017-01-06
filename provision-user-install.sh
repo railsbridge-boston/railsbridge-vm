@@ -9,8 +9,8 @@ chruby "ruby-$RAILSBRIDGE_RUBY_VERSION"
 set -v
 
 # Copy files that should be owned by the user account
-rsync -rtv /tmp/provision-files/home/vagrant/ /home/vagrant/
-echo "chruby ruby-$RAILSBRIDGE_RUBY_VERSION" >> /home/vagrant/.bash_profile
+rsync -rtv /tmp/provision-files/home/ubuntu/ /home/ubuntu/
+echo "chruby ruby-$RAILSBRIDGE_RUBY_VERSION" >> /home/ubuntu/.bash_profile
 
 # Install gems
 gem install rails --version "$RAILSBRIDGE_RAILS_VERSION"

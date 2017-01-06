@@ -3,7 +3,7 @@
 
 Vagrant.configure('2') do |config|
   # Base box
-  config.vm.box = "ubuntu/trusty32"
+  config.vm.box = "ubuntu/xenial32"
   # RailsBridge provisioning config
   config.vm.provision :file, source: "provision-files", destination: "/tmp/provision-files"
   config.vm.provision :shell, path: "provision-root-install.sh"

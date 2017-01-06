@@ -4,17 +4,16 @@
 # Tell the shell to print commands before running them
 set -v
 
-# Remove configuration-management systems preinstalled in official Ubuntu images
-apt-get -y remove --purge chef chef-zero puppet puppet-common juju landscape-client landscape-common
-# Remove dependencies of Twisted Python
-apt-get -y remove --purge libjs-jquery python-apport python-crypto python-dbus python-dbus-dev python-gdbm python-gi python-httplib2 python-keyring python-launchpadlib python-lazr.restfulclient python-lazr.uri python-openssl python-pam python-pkg-resources python-problem-report python-pycurl python-secretstorage python-simplejson python-twisted-bin python-twisted-core python-twisted-names python-twisted-web python-wadllib python-zope.interface
-# And any dependencies
-apt-get -y autoremove
+# Remove Ubuntu stuff we don't want
+sudo apt-get -y remove --purge snapd ubuntu-core-launcher ubuntu-release-upgrader-core
+# Clean up dependencies of those
+sudo apt-get -y autoremove
+
 # Get any security updates not in the base image
 sudo apt-get update
 sudo apt-get -y upgrade
 # Other packages we need
-sudo apt-get install -q -y git vim nodejs sqlite3 libsqlite3-dev
+sudo apt-get install -q -y make nodejs sqlite3 libsqlite3-dev
 
 # Copy our files into place
 rsync -rtv /tmp/provision-files/etc/ /etc/
