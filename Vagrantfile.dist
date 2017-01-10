@@ -4,8 +4,16 @@
 # Don't provision using this file; it's only for packaging with the image.
 # It would be nice if this could set config.vm.box_version but we don't get
 # to have versioning since we're distributing this as a file.
+#
+# We need to fix a couple things for the official Ubuntu 16.04 (xenial) box
+# specifically; it uses a nonstandard username (during provisioning, this just
+# work, since we refer to the official box in the development Vagrantfile) and
+# sends serial console output to a file (this works in development, but if we
+# try to package the box, it bakes in the return value of Dir.pwd on the
+# development machine!)
 
 Vagrant.configure('2') do |config|
+  config.ssh.username = "ubuntu"
   config.vm.box = "railsbridge"
   config.vm.network :forwarded_port, guest: 3000, host: 3000
   config.vm.provider "virtualbox" do |vb|
