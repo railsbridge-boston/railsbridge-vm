@@ -2,20 +2,13 @@
 
 tput bold
 cat <<EOF
-
 Welcome to the RailsBridge virtual machine! The VM is a "computer
 within your computer" running the Ubuntu Linux operating system.
-Everything you need for the Suggestotron tutorial is installed. To
-start your rails server, type this command and press return:
-
-    rails server -b 0.0.0.0
-
-Once the server is running, open this address in your web browser:
-    http://localhost:3000
+Everything you need for the Suggestotron tutorial is installed.
 
 The /vagrant directory is shared with the folder on your laptop
 where you created this VM. Any file you put there in your laptop
-will appear here in /vagrant. This lets you edit files with a
+will appear here in /vagrant. This lets you edit files with your
 Windows or mac OS text editor, and run them here in the VM.
 
 To leave the virtual machine, type this and press return:
