@@ -1,6 +1,5 @@
 #!/bin/sh
 
-tput bold
 cat <<EOF
 Welcome to the RailsBridge virtual machine! The VM is a "computer
 within your computer" running the Ubuntu Linux operating system.
@@ -14,4 +13,3 @@ Windows or mac OS text editor, and run them here in the VM.
 To leave the virtual machine, type this and press return:
     exit
 EOF
-tput sgr0
