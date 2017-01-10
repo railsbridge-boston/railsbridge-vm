@@ -12,4 +12,9 @@ Vagrant.configure('2') do |config|
   config.vm.provision :shell, path: "provision-root-cleanup.sh"
   # Enable forwarded port while we're developing and testing this box
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  # Work around the official image hardcoding our current pwd (introduced here:)
+  # http://bazaar.launchpad.net/~ubuntu-core-dev/livecd-rootfs/trunk/revision/1321
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize [ "modifyvm", :id, "--uartmode1", "file", "console.log" ]
+  end
 end
