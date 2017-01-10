@@ -11,5 +11,7 @@ will appear here in /vagrant. This lets you edit files with your
 Windows or mac OS text editor, and run them here in the VM.
 
 To leave the virtual machine, type this and press return:
+
     exit
+
 EOF

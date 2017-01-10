@@ -18,9 +18,9 @@ apt-get install -q -y make nodejs sqlite3 libsqlite3-dev
 # Copy our files into place
 rsync -rtv /tmp/provision-files/etc/ /etc/
 rsync -rtv /tmp/provision-files/usr/local/bin/ /usr/local/bin/
-# Force MOTD generation
-rm -f /etc/update-motd.d/51-cloudguest
-run-parts --lsbsysinit /etc/update-motd.d > /run/motd.dynamic
+
+# Clean up MOTD; don't need these Ubuntu links
+rm -f /etc/update-motd.d/10-help-text /etc/update-motd.d/51-cloudguest
 
 # Do all source installation from this dir, which we'll clean up in another script
 mkdir -p /usr/local/src && cd /usr/local/src
