@@ -12,4 +12,9 @@ Vagrant.configure('2') do |config|
   config.vm.provision :shell, path: "provision-root-cleanup.sh"
   # Enable forwarded port while we're developing and testing this box
   config.vm.network :forwarded_port, guest: 3000, host: 3000
+  # We explicitly disconnect console output in the packaged box, but
+  # while developing it's good to check for errors
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize [ "modifyvm", :id, "--uartmode1", "file", "console.log" ]
+  end
 end
