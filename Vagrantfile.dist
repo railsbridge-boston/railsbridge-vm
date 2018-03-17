@@ -5,7 +5,7 @@
 # It would be nice if this could set config.vm.box_version but we don't get
 # to have versioning since we're distributing this as a file.
 #
-# We need to fix a on thing for the official Ubuntu 16.04 (xenial) box
+# We need to fix one thing for the official Ubuntu 16.04 (xenial) box
 # specifically: it sends serial console output to a file (this works in
 # development, but if we try to package the box, it bakes in the return
 # value of Dir.pwd on the development machine!). The latter was introduced in:
