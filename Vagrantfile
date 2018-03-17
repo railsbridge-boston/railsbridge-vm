@@ -15,6 +15,6 @@ Vagrant.configure('2') do |config|
   # We explicitly disconnect console output in the packaged box, but
   # while developing it's good to check for errors
   config.vm.provider "virtualbox" do |vb|
-    vb.customize [ "modifyvm", :id, "--uartmode1", "file", "console.log" ]
+    vb.customize [ "modifyvm", :id, "--uartmode1", "file", File.join(Dir.pwd, "console.log") ]
   end
 end
