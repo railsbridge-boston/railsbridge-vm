@@ -18,6 +18,10 @@ We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profil
 
 ## Building a fresh image
 
+### WARNING
+
+If this is not your first time building a VM, make sure you have cleaned up any old versions of the Ubuntu base image with `vagrant box prune` before continuing.
+
 ### Prerequisites
 
 * Oracle VirtualBox - https://www.virtualbox.org - Last tested on v5.2.6
