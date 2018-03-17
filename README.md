@@ -23,7 +23,7 @@ If this is not your first time building a VM, make sure you have cleaned up any 
 ### Prerequisites
 
 * Oracle VirtualBox - https://www.virtualbox.org - Last tested on v5.2.8
-* HasiCorp Vagrant - https://www.vagrantup.com - Last tested on v2.0.3
+* HashiCorp Vagrant - https://www.vagrantup.com - Last tested on v2.0.3
 * Ruby - https://www.ruby-lang.org/en/ - Last tested on v2.5.0
 
 Download and install VirtualBox and Vagrant to your local machine. Installers for all platforms are available at the sites above, however these steps were only validated using macOS High Sierra.
