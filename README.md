@@ -8,21 +8,23 @@ To instructors and TAs: if you're interested in helping to maintain the VM, keep
 
 ## Setup of the generated VM
 
-The base box is Ubuntu 16.04 LTS 32-bit; Ubuntu distributes version 5.0 of the VirtualBox guest additions. We should have students install the same version of the VirtualBox host.
+The base box is Ubuntu 16.04 LTS 32-bit; Ubuntu distributes version 5.0 of the VirtualBox guest additions (which work with VirtualBox 5.2). We should have students install the latest compatible version of the VirtualBox host.
 
 The target versions are Ruby 2.5 and Rails 5.1 (the latest patchlevels available at build time). These are set in `provision-files/versions.sh`, which is used by the provisioning scripts.
-
-If you want to run a workshop with Rails 3, there is a `rails3` branch (Ruby 1.9.3, Rails 3.2). It may be less up to date so check if there have been any security updates to Rails 3 before building it.
 
 We use `chruby` to build/install Ruby, and invoke it in the user's `.bash_profile` to set their `PATH`. It provides a version of `gem` that defaults to user installs.
 
 ## Building a fresh image
 
+### WARNING
+
+If this is not your first time building a VM, make sure you have cleaned up any old versions of the Ubuntu base image with `vagrant box prune` before continuing.
+
 ### Prerequisites
 
-* Oracle VirtualBox - https://www.virtualbox.org - Last tested on v5.2.6
-* HasiCorp Vagrant - https://www.vagrantup.com - Last tested on v2.0.2
-* Ruby - https://www.ruby-lang.org/en/ - Last tested on v2.4.2
+* Oracle VirtualBox - https://www.virtualbox.org - Last tested on v5.2.8
+* HashiCorp Vagrant - https://www.vagrantup.com - Last tested on v2.0.3
+* Ruby - https://www.ruby-lang.org/en/ - Last tested on v2.5.0
 
 Download and install VirtualBox and Vagrant to your local machine. Installers for all platforms are available at the sites above, however these steps were only validated using macOS High Sierra.
 
